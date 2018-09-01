@@ -13,6 +13,9 @@
 		028BCA4B213ABC5C0079873E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028BCA4A213ABC5C0079873E /* Assets.xcassets */; };
 		028BCA4E213ABC5C0079873E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028BCA4C213ABC5C0079873E /* LaunchScreen.storyboard */; };
 		028BCA51213ABC5C0079873E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 028BCA50213ABC5C0079873E /* main.m */; };
+		028BCA59213ABDE60079873E /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028BCA58213ABDE60079873E /* AddTaskViewController.m */; };
+		028BCA5C213AC0350079873E /* DetailTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028BCA5B213AC0350079873E /* DetailTaskViewController.m */; };
+		028BCA5F213B0ED00079873E /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 028BCA5E213B0ED00079873E /* EditTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		028BCA4D213ABC5C0079873E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		028BCA4F213ABC5C0079873E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028BCA50213ABC5C0079873E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		028BCA57213ABDE60079873E /* AddTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
+		028BCA58213ABDE60079873E /* AddTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
+		028BCA5A213AC0350079873E /* DetailTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTaskViewController.h; sourceTree = "<group>"; };
+		028BCA5B213AC0350079873E /* DetailTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTaskViewController.m; sourceTree = "<group>"; };
+		028BCA5D213B0ED00079873E /* EditTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditTaskViewController.h; sourceTree = "<group>"; };
+		028BCA5E213B0ED00079873E /* EditTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditTaskViewController.m; sourceTree = "<group>"; };
+		028BCA60213B1DB10079873E /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,7 @@
 		028BCA35213ABC580079873E = {
 			isa = PBXGroup;
 			children = (
+				028BCA60213B1DB10079873E /* PrefixHeader.pch */,
 				028BCA40213ABC580079873E /* overDueApp */,
 				028BCA3F213ABC580079873E /* Products */,
 			);
@@ -63,6 +74,12 @@
 				028BCA44213ABC580079873E /* ViewController.h */,
 				028BCA45213ABC580079873E /* ViewController.m */,
 				028BCA47213ABC580079873E /* Main.storyboard */,
+				028BCA5D213B0ED00079873E /* EditTaskViewController.h */,
+				028BCA5E213B0ED00079873E /* EditTaskViewController.m */,
+				028BCA5A213AC0350079873E /* DetailTaskViewController.h */,
+				028BCA5B213AC0350079873E /* DetailTaskViewController.m */,
+				028BCA57213ABDE60079873E /* AddTaskViewController.h */,
+				028BCA58213ABDE60079873E /* AddTaskViewController.m */,
 				028BCA4A213ABC5C0079873E /* Assets.xcassets */,
 				028BCA4C213ABC5C0079873E /* LaunchScreen.storyboard */,
 				028BCA4F213ABC5C0079873E /* Info.plist */,
@@ -142,8 +159,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				028BCA46213ABC580079873E /* ViewController.m in Sources */,
+				028BCA59213ABDE60079873E /* AddTaskViewController.m in Sources */,
 				028BCA51213ABC5C0079873E /* main.m in Sources */,
+				028BCA5F213B0ED00079873E /* EditTaskViewController.m in Sources */,
 				028BCA43213ABC580079873E /* AppDelegate.m in Sources */,
+				028BCA5C213AC0350079873E /* DetailTaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +305,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3NK7U77Q3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = overDueApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +324,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3NK7U77Q3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PrefixHeader.pch;
 				INFOPLIST_FILE = overDueApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

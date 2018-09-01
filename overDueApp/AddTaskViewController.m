@@ -34,4 +34,26 @@
 }
 */
 
+- (IBAction)saveButtonBarAddView:(UIBarButtonItem *)sender {
+    if ([_textNameTextFieldAddView.text isEqualToString:@"" ]|| [_textNameTextFieldAddView.text isEqualToString:@""])
+    {
+        UIAlertController *alert =[UIAlertController alertControllerWithTitle:@"Alert Message" message:@"you must fill task name and task detail" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action=[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+    }else{
+        [[NSUserDefaults standardUserDefaults] setObject:_textNameTextFieldAddView.text forKey:TASK_NAME];
+        [[NSUserDefaults standardUserDefaults]setObject:_detailTaskTextViewAddView.text forKey:TASK_DETAIAL];
+        [[NSUserDefaults standardUserDefaults ] setObject:self.dateTaskDatePickerAddview.date forKey:TASK_DATE];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+    [self.delegate DidSaveTask];
+    }
+    
+}
+
+- (IBAction)cancelBarButtonAddView:(UIBarButtonItem *)sender {
+    [self.delegate DidCancelTask];
+    
+}
 @end
