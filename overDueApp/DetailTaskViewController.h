@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WETaskModel.h"
+#import "EditTaskViewController.h"
 
-@interface DetailTaskViewController : UIViewController
+@protocol DetailTaskViewControllerDeleget<NSObject>
+-(void)taskSaveFromDetailVC:(WETaskModel*)task;
+@end
+
+@interface DetailTaskViewController : UIViewController<EditTaskViewControllerDelegete>
+@property (weak,nonatomic) id<DetailTaskViewControllerDeleget> delegete;
+@property (weak, nonatomic) IBOutlet UILabel *taskLabel;
+@property (weak, nonatomic) IBOutlet UILabel *taskDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *taskDetailLabel;
+@property (weak, nonatomic) IBOutlet UISwitch *taskSwitch;
+@property (strong,nonatomic) WETaskModel *task;
+- (IBAction)EditTaskButtonPressed:(UIButton *)sender;
 
 @end

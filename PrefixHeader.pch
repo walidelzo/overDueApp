@@ -14,5 +14,7 @@
 #define TASK_NAME @"the task name"
 #define TASK_DETAIAL @"the task detail"
 #define TASK_DATE @"the date of task"
+#define TASK_ISCOMPLETE @"true if task complet and false if task not complete"
+#define ALL_TASKS @"the key of array use for nsuserdefualts"
 
 #endif /* PrefixHeader_pch */

@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "AddTaskViewController.h"
-@interface ViewController : UIViewController<UITableViewDelegate,AddTaskViewControllerDelegate>
+#import "DetailTaskViewController.h"
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,AddTaskViewControllerDelegate,DetailTaskViewControllerDeleget>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 - (IBAction)reOrderbarButtonAction:(UIBarButtonItem *)sender;
 - (IBAction)addTaskBarButtonAction:(UIBarButtonItem *)sender;
-
-
+@property (strong,nonatomic) NSMutableArray* AlltaskObjects;
+@property(nonatomic)NSInteger  rowNumber;
 @end
 
